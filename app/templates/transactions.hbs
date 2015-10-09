@@ -1,0 +1,19 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {{#each sortedModel as |transaction|}}
+      <tr>
+        <td>{{transaction.id}}</td>
+        <td>{{transaction.name}}</td>
+        <td>{{format-currency transaction.amount to="pound"}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
